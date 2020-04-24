@@ -1,16 +1,17 @@
-﻿using System;
+﻿using CarMag.View;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace App1
+namespace CarMag
 {
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            //MainPage = new InicioCarouselV();
+            MainPage = new Page1();
         }
 
         protected override void OnStart()
