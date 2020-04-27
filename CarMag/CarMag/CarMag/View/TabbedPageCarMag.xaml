@@ -8,10 +8,10 @@
              x:Class="CarMag.View.TabbedPageCarMag"
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              android:TabbedPage.ToolbarPlacement="Bottom"
-             BarBackgroundColor="LightBlue">
+             >
 
     <TabbedPage.Children>
-        <NavigationPage Title="Historico" Icon="baseline_assessment_black_18.png">
+        <NavigationPage Title="Historico" Icon="baseline_assessment_black_24.png">
             <x:Arguments>
                 <vistas:HistoricoView />
             </x:Arguments>
@@ -19,7 +19,7 @@
         <NavigationPage Title="Gasto">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android" Value="baseline_assessment_black_18.png" />
+                    <On Platform="Android" Value="baseline_euro_symbol_black_24.png" />
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
@@ -29,7 +29,7 @@
         <NavigationPage Title="Ruta">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android" Value="icono03.png" />
+                    <On Platform="Android" Value="baseline_swap_calls_black_24.png" />
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
@@ -39,7 +39,7 @@
         <NavigationPage Title="Servicio">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android" Value="icono03.png" />
+                    <On Platform="Android" Value="baseline_build_black_24.png" />
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
