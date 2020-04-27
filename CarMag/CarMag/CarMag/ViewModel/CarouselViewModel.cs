@@ -10,9 +10,9 @@ namespace CarMag.ViewModel
     public class CarouselViewModel : BindableObject
     {
         private ObservableCollection<ItemsCarousel> items = new ObservableCollection<ItemsCarousel>();
-        ItemsCarousel item1 = new ItemsCarousel("0", "Bienvenido a CarMag", "coche.png");
-        ItemsCarousel item2 = new ItemsCarousel("0", "Gestiona los gastos de tus viajes o trayectos", "surtidor.png");
-        ItemsCarousel item3 = new ItemsCarousel("0", "Recuerda y gestiona el mantenimiento de tu vehiculo", "herramienta.jpg");
+        ItemsCarousel item1 = new ItemsCarousel("0", "Bienvenido a CarMag", "baseline_directions_car_black_48.png");
+        ItemsCarousel item2 = new ItemsCarousel("0", "Gestiona los gastos de tus viajes o trayectos", "baseline_local_gas_station_black_48.png");
+        ItemsCarousel item3 = new ItemsCarousel("0", "Recuerda y gestiona el mantenimiento de tu vehiculo", "baseline_build_black_48.png");
         public CarouselViewModel()
         {
             LoadItems();

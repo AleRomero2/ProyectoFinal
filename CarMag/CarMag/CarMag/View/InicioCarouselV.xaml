@@ -21,7 +21,7 @@
                                        HorizontalOptions="Center" VerticalOptions="Center" />
                                 <Image Margin="0,115,0,0"
                                     Grid.Row="1"
-                                    Aspect="AspectFill"
+                                    Aspect="AspectFit"
                                     Source="{Binding image}"
                                      />
                                 <Button Margin="0,100,0,0" Grid.Row="2"  Text="Saltar" VerticalOptions="End" HorizontalOptions="End"/>

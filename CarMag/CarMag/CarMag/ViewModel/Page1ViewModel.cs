@@ -12,7 +12,7 @@ namespace CarMag.ViewModel
 {
     class Page1ViewModel : BindableObject
     {
-        public static List<Cliente> Lcliente = new List<Cliente>();
+        public static List<Cliente> Lcliente;
 
         public Page1ViewModel()
         {

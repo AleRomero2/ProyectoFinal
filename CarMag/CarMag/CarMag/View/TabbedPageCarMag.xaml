@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vistas="clr-namespace:CarMag.View"
+             x:Class="CarMag.View.TabbedPageCarMag"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             android:TabbedPage.ToolbarPlacement="Bottom"
+             BarBackgroundColor="LightBlue">
+
+    <TabbedPage.Children>
+        <NavigationPage Title="Historico" Icon="baseline_assessment_black_18.png">
+            <x:Arguments>
+                <vistas:HistoricoView />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="Gasto">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="baseline_assessment_black_18.png" />
+                </OnPlatform>
+            </NavigationPage.Icon>
+            <x:Arguments>
+                <vistas:GastosView />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="Ruta">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="icono03.png" />
+                </OnPlatform>
+            </NavigationPage.Icon>
+            <x:Arguments>
+                <vistas:RutaView />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="Servicio">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="icono03.png" />
+                </OnPlatform>
+            </NavigationPage.Icon>
+            <x:Arguments>
+                <vistas:ServicioView />
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+</TabbedPage>
