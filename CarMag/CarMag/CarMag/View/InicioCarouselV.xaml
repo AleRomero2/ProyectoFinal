@@ -24,7 +24,7 @@
                                     Aspect="AspectFit"
                                     Source="{Binding image}"
                                      />
-                                <Button Margin="0,100,0,0" Grid.Row="2"  Text="Saltar" VerticalOptions="End" HorizontalOptions="End"/>
+                                <Button Visual="Material" BackgroundColor="LightSkyBlue" Margin="0,100,0,0" Grid.Row="2"  Text="Saltar" VerticalOptions="End" HorizontalOptions="End"/>
                             </Grid>
                         </Frame>
                     </Grid>

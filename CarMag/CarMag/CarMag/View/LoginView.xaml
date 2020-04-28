@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CarMag.View.LoginView">
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="30">
+            <Image Source="baseline_directions_car_black_48.png" />
+            <Label Visual="Material" Text="Login CarMag" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Label Visual="Material" Text="Introduce tu nombre de usuario y contraseña"/>
+            <Entry Visual="Material" x:Name="Username" Placeholder="Username"/>
+            <Entry Visual="Material" x:Name="Password" Placeholder="Password"/>
+            <Button Visual="Material" Text="Iniciar sesión" BackgroundColor="LightSkyBlue"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
