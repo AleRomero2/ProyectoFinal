@@ -4,15 +4,17 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CarMag.View.LoginView">
+             x:Class="CarMag.View.LoginView"
+             Visual="Material"
+             >
     <ContentPage.Content>
         <StackLayout Padding="20" Spacing="30">
             <Image Source="baseline_directions_car_black_48.png" />
-            <Label Visual="Material" Text="Login CarMag" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-            <Label Visual="Material" Text="Introduce tu nombre de usuario y contraseña"/>
-            <Entry Visual="Material" x:Name="Username" Placeholder="Username"/>
-            <Entry Visual="Material" x:Name="Password" Placeholder="Password"/>
-            <Button Visual="Material" Text="Iniciar sesión" BackgroundColor="LightSkyBlue"/>
+            <Label Text="Login CarMag" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Label Text="Introduce tu nombre de usuario y contraseña"/>
+            <Entry x:Name="Username" Placeholder="Username"/>
+            <Entry x:Name="Password" Placeholder="Password"/>
+            <Button Text="Iniciar sesión" BackgroundColor="LightSkyBlue"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

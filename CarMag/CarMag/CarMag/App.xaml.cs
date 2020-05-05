@@ -11,7 +11,7 @@ namespace CarMag
         {
             InitializeComponent();
             //MainPage = new InicioCarouselV();
-            MainPage = new InicioCarouselV();
+            MainPage = new TabbedPageCarMag();
         }
 
         protected override void OnStart()

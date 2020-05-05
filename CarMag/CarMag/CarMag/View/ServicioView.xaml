@@ -5,12 +5,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CarMag.View.ServicioView"
-             Title="servicio">
+             Title="Servicio"
+             Visual="Material"
+             IconImageSource="baseline_build_black_24.png">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <DatePicker  BackgroundColor="LightGray" Margin="8,20,8,8"/>
+            <Entry Placeholder="Odometro" BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <Entry Placeholder="Tipo de Servicio" BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <Entry Placeholder="Localizacion" BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <Button Text="Añadir" HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

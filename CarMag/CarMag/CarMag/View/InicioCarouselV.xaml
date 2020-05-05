@@ -4,7 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CarMag.View.InicioCarouselV">
+             x:Class="CarMag.View.InicioCarouselV"
+             Visual="Material"
+             >
     <ContentPage.Content>
         <CarouselView ItemsSource="{Binding Items}">
             <CarouselView.ItemTemplate>
@@ -24,7 +26,7 @@
                                     Aspect="AspectFit"
                                     Source="{Binding image}"
                                      />
-                                <Button Visual="Material" BackgroundColor="LightSkyBlue" Margin="0,100,0,0" Grid.Row="2"  Text="Saltar" VerticalOptions="End" HorizontalOptions="End"/>
+                                <Button BackgroundColor="LightSkyBlue" Margin="0,100,0,0" Grid.Row="2"  Text="Saltar" VerticalOptions="End" HorizontalOptions="End"/>
                             </Grid>
                         </Frame>
                     </Grid>

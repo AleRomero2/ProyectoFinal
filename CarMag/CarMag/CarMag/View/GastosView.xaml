@@ -5,12 +5,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CarMag.View.GastosView"
-             Title="gasto">
+             Title="gasto"
+             Visual="Material">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <Entry Placeholder="Titulo" BackgroundColor="LightGray" Margin="8,20,8,8"/>
+            <Entry Placeholder="Tipo de gasto" BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <DatePicker  BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <Entry Placeholder="Motivo" BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <Button Text="Añadir" HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
