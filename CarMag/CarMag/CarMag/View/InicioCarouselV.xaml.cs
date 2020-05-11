@@ -19,6 +19,6 @@ namespace CarMag.View
             InitializeComponent();
             BindingContext = new CarouselViewModel();
         }
-        
+
     }
 }

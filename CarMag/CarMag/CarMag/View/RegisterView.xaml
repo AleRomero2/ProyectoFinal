@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CarMag.View.RegisterView"
+             Visual="Material">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Regístrate en CarMag" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Label Text="Introduce tu nombre de usuario"/>
+            <Entry x:Name="Username" Placeholder="Username"/>
+            <Label Text="Introduce tu contraseña"/>
+            <Entry x:Name="Password" Placeholder="Password"/>
+            <Label Text="Introduce tu email"/>
+            <Entry x:Name="Email" Placeholder="Email"/>
+            <Label Text="Consumo del vehiculo cada 100Km"/>
+            <Entry x:Name="Consumo" Placeholder="5L/100"/>
+            <Button Text="Registrarse" Command="{Binding RegistButtonCommand}" BackgroundColor="LightSkyBlue"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

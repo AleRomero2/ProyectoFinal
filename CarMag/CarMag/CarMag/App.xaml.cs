@@ -10,8 +10,7 @@ namespace CarMag
         public App()
         {
             InitializeComponent();
-            //MainPage = new InicioCarouselV();
-            MainPage = new TabbedPageCarMag();
+            MainPage = new NavigationPage(new LoginView());
         }
 
         protected override void OnStart()

@@ -11,12 +11,12 @@ using Xamarin.Forms.Xaml;
 namespace CarMag.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginView : ContentPage
+    public partial class RegisterView : ContentPage
     {
-        public LoginView()
+        public RegisterView()
         {
             InitializeComponent();
-            BindingContext = new LoginViewModel();
+            BindingContext = new RegisterViewModel();
         }
     }
 }

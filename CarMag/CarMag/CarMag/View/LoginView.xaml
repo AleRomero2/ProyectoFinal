@@ -9,12 +9,13 @@
              >
     <ContentPage.Content>
         <StackLayout Padding="20" Spacing="30">
-            <Image Source="baseline_directions_car_black_48.png" />
+            <Image Source="baseline_directions_car_black_24.png" />
             <Label Text="Login CarMag" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
             <Label Text="Introduce tu nombre de usuario y contraseña"/>
             <Entry x:Name="Username" Placeholder="Username"/>
             <Entry x:Name="Password" Placeholder="Password"/>
-            <Button Text="Iniciar sesión" BackgroundColor="LightSkyBlue"/>
+            <Button Text="Iniciar sesión" Command="{Binding LoginButtonCommand}" BackgroundColor="LightSkyBlue"/>
+            <Button Text="Regístrate" Command="{Binding RegisterButtonCommand}" BackgroundColor="LightSkyBlue"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

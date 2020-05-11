@@ -26,7 +26,7 @@
                                     Aspect="AspectFit"
                                     Source="{Binding image}"
                                      />
-                                <Button BackgroundColor="LightSkyBlue" Margin="0,100,0,0" Grid.Row="2"  Text="Saltar" VerticalOptions="End" HorizontalOptions="End"/>
+                                <Button x:Name="ButtonSkip" Command="{Binding SkipButtonCommand}" BackgroundColor="LightSkyBlue" Margin="0,100,0,0" Grid.Row="2"  Text="Saltar" VerticalOptions="End" HorizontalOptions="End"/>
                             </Grid>
                         </Frame>
                     </Grid>

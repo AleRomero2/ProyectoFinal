@@ -5,12 +5,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CarMag.View.RutaView"
-             Title="ruta">
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             Title="Ruta"
+             Visual="Material">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="Origen" BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <Entry Placeholder="Destino" BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <DatePicker  BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <maps:Map x:Name="MapView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Entry Placeholder="Motivo" BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <Button Text="Añadir" HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
