@@ -1,4 +1,5 @@
-﻿using CarMag.View;
+﻿using CarMag.Service;
+using CarMag.View;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,12 +16,19 @@ namespace CarMag.ViewModel
         private Command _RegisterButtonCommand;
         public ICommand RegisterButtonCommand => _RegisterButtonCommand;
         public LoginViewModel(){
-            _LoginButtonCommand = new Command(LoginButtonComman);
+            _LoginButtonCommand = new Command(LoginButtonCommanAsync);
             _RegisterButtonCommand = new Command(RegisterButtonComman);
         }
-        private void LoginButtonComman()
+        private async void LoginButtonCommanAsync()
         {
-            App.Current.MainPage.Navigation.PushAsync(new TabbedPageCarMag());
+            if (await HttpService.httpAuth("ale@gmail.com", "123"))
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new TabbedPageCarMag());
+            }
+            else
+            {
+                Console.WriteLine("Credenciales Erroneas");
+            }
         }
         private void RegisterButtonComman()
         {
