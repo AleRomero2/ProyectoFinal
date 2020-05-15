@@ -12,7 +12,7 @@ namespace CarMag.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TabbedPageCarMag : TabbedPage
     {
-        public TabbedPageCarMag()
+        public TabbedPageCarMag(string textEmail)
         {
             InitializeComponent();
         }

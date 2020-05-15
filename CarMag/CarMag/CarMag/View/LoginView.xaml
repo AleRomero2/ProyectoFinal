@@ -12,8 +12,8 @@
             <Image Source="baseline_directions_car_black_24.png" />
             <Label Text="Login CarMag" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
             <Label Text="Introduce tu nombre de usuario y contraseña"/>
-            <Entry x:Name="Username" Placeholder="Username"/>
-            <Entry x:Name="Password" Placeholder="Password"/>
+            <Entry x:Name="Email" Text="{Binding TextEmail}" Placeholder="Username"/>
+            <Entry x:Name="Password" Text="{Binding TextPassword}" Placeholder="Password"/>
             <Button Text="Iniciar sesión" Command="{Binding LoginButtonCommand}" BackgroundColor="LightSkyBlue"/>
             <Button Text="Regístrate" Command="{Binding RegisterButtonCommand}" BackgroundColor="LightSkyBlue"/>
         </StackLayout>

@@ -6,14 +6,14 @@ namespace CarMag.Model
 {
     public class Cliente
     {
-        public long Id { get; set; }
+        public long id { get; set; }
         public string nombre { get; set; }
         public string psw { get; set; }
         public string email { get; set; }
 
         public override string ToString()
         {
-            return "Cliente: " + Id +" " +nombre + " " + psw;
+            return "Cliente: " + id +" " +nombre + " " + psw;
         }
         public Cliente(string email,string psw)
         {
@@ -23,7 +23,7 @@ namespace CarMag.Model
 
         public Cliente(long id, string nombre, string psw, string email)
         {
-            Id = id;
+            this.id = id;
             this.nombre = nombre;
             this.psw = psw;
             this.email = email;

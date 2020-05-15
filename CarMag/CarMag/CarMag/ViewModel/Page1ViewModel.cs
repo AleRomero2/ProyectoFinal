@@ -13,15 +13,15 @@ namespace CarMag.ViewModel
     class Page1ViewModel : BindableObject
     {
         public static List<Cliente> Lcliente;
-
+        IHttpService peticion = new HttpService();
         public Page1ViewModel()
         {
-            ApiCall();
+           // ApiCall();
         }
-        private static async void ApiCall()
+        /*private static async void ApiCall()
         {
-            Lcliente = await HttpService.httpGet();
-        }
+           // Lcliente = await peticion.httpGet();
+        }*/
 
         public List<Cliente> Lclientes
         {
