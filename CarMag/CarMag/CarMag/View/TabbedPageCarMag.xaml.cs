@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CarMag.Model;
+using CarMag.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +14,12 @@ namespace CarMag.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TabbedPageCarMag : TabbedPage
     {
-        public TabbedPageCarMag(string textEmail)
+
+         public TabbedPageCarMag(IHttpService peticion)
         {
             InitializeComponent();
+
         }
+        
     }
 }

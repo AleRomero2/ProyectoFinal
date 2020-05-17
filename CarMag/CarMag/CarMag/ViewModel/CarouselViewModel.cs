@@ -24,7 +24,7 @@ namespace CarMag.ViewModel
         }
         private void SkipButtonComman()
         {
-            App.Current.MainPage.Navigation.PushAsync(new TabbedPageCarMag("ale@gmail.com"));
+            //App.Current.MainPage.Navigation.PushAsync(new TabbedPageCarMag("ale@gmail.com"));
         }
 
             public ObservableCollection<ItemsCarousel> Items

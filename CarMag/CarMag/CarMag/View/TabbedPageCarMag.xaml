@@ -5,10 +5,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              xmlns:vistas="clr-namespace:CarMag.View"
+            xmlns:vm="clr-namespace:CarMag.ViewModel"
              x:Class="CarMag.View.TabbedPageCarMag"
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
-             android:TabbedPage.ToolbarPlacement="Bottom"
-             >
+             android:TabbedPage.ToolbarPlacement="Bottom">
 
     <TabbedPage.Children>
         <NavigationPage Title="Historico" Icon="baseline_assessment_black_24.png">
@@ -23,7 +23,11 @@
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <vistas:GastosView />
+                <vistas:GastosView >
+                    <vistas:GastosView.BindingContext>
+                        <vm:GastoViewModel/>
+                    </vistas:GastosView.BindingContext>
+                </vistas:GastosView>
             </x:Arguments>
         </NavigationPage>
         <NavigationPage Title="Ruta">

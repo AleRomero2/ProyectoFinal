@@ -33,9 +33,8 @@ namespace CarMag.ViewModel
                     ValueLabel = "25%"
                 },
             },
-            LineSize = 25,
-            //AnimationDuration = new TimeSpan(6000),
-            LabelTextSize = 45,
+            LineSize = 30,
+            LabelTextSize = 50,
         };
     }
 }

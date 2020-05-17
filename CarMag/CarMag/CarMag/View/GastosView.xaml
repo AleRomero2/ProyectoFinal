@@ -5,16 +5,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CarMag.View.GastosView"
-             Title="gasto"
+             Title="Gasto"
              Visual="Material">
     <ContentPage.Content>
         <StackLayout>
-
-            <Entry Placeholder="Titulo" BackgroundColor="LightGray" Margin="8,20,8,8"/>
-            <Entry Placeholder="Tipo de gasto" BackgroundColor="LightGray" Margin="8,8,8,8"/>
-            <DatePicker  BackgroundColor="LightGray" Margin="8,8,8,8"/>
-            <Entry Placeholder="Motivo" BackgroundColor="LightGray" Margin="8,8,8,8"/>
-            <Button Text="Añadir" HorizontalOptions="Center"/>
+            <Entry Placeholder="Titulo" Text="{Binding TextTitulo}" BackgroundColor="LightGray" Margin="8,20,8,8"/>
+            <Entry Placeholder="Tipo de gasto" Text="{Binding TextGasto}" BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <DatePicker  BackgroundColor="LightGray" Date="{Binding DatePicker}" Margin="8,8,8,8"/>
+            <Entry Placeholder="Motivo" Text="{Binding TextMotivo}" BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <Entry Placeholder="Cuantia €" Text="{Binding TextCuantia}" BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <Button Text="Añadir" Command="{Binding GastoButtonCommand}" HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

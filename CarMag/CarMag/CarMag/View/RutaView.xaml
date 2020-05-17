@@ -12,8 +12,7 @@
         <StackLayout>
             <Entry Placeholder="Origen" BackgroundColor="LightGray" Margin="8,8,8,8"/>
             <Entry Placeholder="Destino" BackgroundColor="LightGray" Margin="8,8,8,8"/>
-            <DatePicker  BackgroundColor="LightGray" Margin="8,8,8,8"/>
-            <maps:Map x:Name="MapView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <maps:Map x:Name="MapView" MapType="Street" IsShowingUser="True"/>
             <Entry Placeholder="Motivo" BackgroundColor="LightGray" Margin="8,8,8,8"/>
             <Button Text="Añadir" HorizontalOptions="Center"/>
         </StackLayout>
