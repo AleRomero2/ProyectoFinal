@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarMag.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace CarMag.View
         public ServicioView()
         {
             InitializeComponent();
+            BindingContext = new MantenimientoViewModel();
         }
     }
 }

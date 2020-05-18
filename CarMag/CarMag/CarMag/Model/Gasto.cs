@@ -5,9 +5,9 @@ using System.Text;
 
 namespace CarMag.Model
 {
-    class Gasto
+    public class Gasto
     {
-        public Gasto(long id, string titulo, string tipoGasto, string motivo,string cuantia)
+        public Gasto(long id, string titulo, string tipoGasto, string motivo,string cuantia,Cliente cliente_id)
         {
             this.id = id;
             this.titulo = titulo;
@@ -15,7 +15,7 @@ namespace CarMag.Model
             //this.fecha = fecha;
             this.motivo = motivo;
             this.cuantia = cuantia;
-            //this.cliente_id = clientid;
+            this.cliente_id = cliente_id;
         }
 
         public long id { get; set; }

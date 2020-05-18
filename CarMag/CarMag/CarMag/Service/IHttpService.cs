@@ -14,6 +14,7 @@ namespace CarMag.Service
         Task httpRegister(string usuario, string email, string password, string consumo, string carburante);
         Task httpAddCar(string consumo, string carburante,string email);
         Task<Cliente> httpGetClienteByEmail(string emaildado);
-        Task httpAddGasto(long id, string titulo, string tipoGasto, string motivo,string cuantia);
+        Task httpAddGasto(long id, string titulo, string tipoGasto, string motivo, string cuantia, Cliente cliente);
+        Task<List<Gasto>> httpGetGasto();
     }
 }

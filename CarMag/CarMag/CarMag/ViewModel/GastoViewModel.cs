@@ -20,9 +20,13 @@ namespace CarMag.ViewModel
         private Command _GastoButtonCommand;
         public ICommand GastoButtonCommand => _GastoButtonCommand;
         IHttpService peticion = new HttpService();
+        Cliente logeado = new Cliente();
+        CacheService cache = new CacheService();
         public GastoViewModel()
         {
             _GastoButtonCommand = new Command(GastoButtonComman);
+            List<Cliente>lista=cache.GetAsync<Cliente>();
+            logeado = lista[0];
         }
         public IHttpService _prueba = new HttpService();
         public IHttpService Prueba
@@ -37,8 +41,7 @@ namespace CarMag.ViewModel
 
         private void GastoButtonComman(object obj)
         {
-            //peticion.httpAddGasto(1, TextTitulo, TextGasto, TextMotivo);
-            Lgasto.Add(new Gasto(1, TextTitulo, TextGasto, TextMotivo, TextCuantia));
+            peticion.httpAddGasto(1, TextTitulo, TextGasto, TextMotivo,TextCuantia,logeado);
         }
 
         public string TextTitulo

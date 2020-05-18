@@ -15,10 +15,9 @@ namespace CarMag.View
     public partial class TabbedPageCarMag : TabbedPage
     {
 
-         public TabbedPageCarMag(IHttpService peticion)
+         public TabbedPageCarMag()
         {
             InitializeComponent();
-
         }
         
     }

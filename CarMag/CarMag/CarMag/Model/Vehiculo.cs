@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CarMag.Model
 {
-    class Vehiculo
+    public class Vehiculo
     {
         public long id { get; set; }
         public string consumo { get; set; }

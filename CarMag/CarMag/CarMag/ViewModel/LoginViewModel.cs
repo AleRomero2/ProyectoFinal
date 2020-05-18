@@ -25,14 +25,14 @@ namespace CarMag.ViewModel
         }
         private async void LoginButtonCommanAsync()
         {
-            //if (await peticion.httpAuth(TextEmail, TextPassword))
-            //{
-                await App.Current.MainPage.Navigation.PushAsync(new TabbedPageCarMag(peticion));
-           // }
+            /*if (await peticion.httpAuth(TextEmail, TextPassword))
+            {*/
+                await App.Current.MainPage.Navigation.PushAsync(new TabbedPageCarMag());
+            //}
            // else
-            //
+            
                 Console.WriteLine("Credenciales Erroneas");
-            //
+            
         }
         private void RegisterButtonComman()
         {

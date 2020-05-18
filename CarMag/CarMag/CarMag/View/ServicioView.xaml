@@ -11,10 +11,11 @@
     <ContentPage.Content>
         <StackLayout>
             <DatePicker  BackgroundColor="LightGray" Margin="8,20,8,8"/>
-            <Entry Placeholder="Odometro" BackgroundColor="LightGray" Margin="8,8,8,8"/>
-            <Entry Placeholder="Tipo de Servicio" BackgroundColor="LightGray" Margin="8,8,8,8"/>
-            <Entry Placeholder="Localizacion" BackgroundColor="LightGray" Margin="8,8,8,8"/>
-            <Button Text="Añadir" HorizontalOptions="Center"/>
+            <Entry Placeholder="Odometro" Text="{Binding TextOdometro}" BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <Entry Placeholder="Tipo de Servicio" Text="{Binding TextTipoServicio}" BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <Entry Placeholder="Localizacion" Text="{Binding TextLocalizacion}" BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <Entry Placeholder="Localizacion" Text="{Binding TextCuantia}" BackgroundColor="LightGray" Margin="8,8,8,8"/>
+            <Button Text="Añadir" Command="{Binding MantenimientoButtonCommand}" HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

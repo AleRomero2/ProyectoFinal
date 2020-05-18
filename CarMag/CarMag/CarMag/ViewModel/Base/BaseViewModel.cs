@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using Xamarin.Forms;
 
 namespace CarMag.ViewModel.Base
 {
-    public class BaseViewModel
+    public class BaseViewModel:BindableObject
     {
         public void RaisePropertyChanged([CallerMemberName] string propertyName = null)
         {

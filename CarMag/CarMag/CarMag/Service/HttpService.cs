@@ -13,7 +13,7 @@ namespace CarMag.Service
     public class HttpService : IHttpService
     {
         const string urll= "http://192.168.31.235:9090/cliente/add";
-        Cliente clientLogged=new Cliente();
+        public Cliente clientLogged=new Cliente();
         string emailLogged;
         public HttpService()
         {
@@ -43,6 +43,7 @@ namespace CarMag.Service
                 Console.WriteLine("Error ", e.Message);
                 login = false;
             }
+            CacheService cache = new CacheService();
             List<Cliente> Lcliente = new List<Cliente>();
             Lcliente = await httpGet();
             for (int i = 0; i < Lcliente.Count; i++)
@@ -55,6 +56,9 @@ namespace CarMag.Service
                     }
                 }
             }
+            List<Cliente> clienteLo = new List<Cliente>();
+            clienteLo.Add(clientLogged);
+            cache.SaveAsync<Cliente>(clienteLo, 1,false);
             return login;
         }
 
@@ -104,11 +108,29 @@ namespace CarMag.Service
                 Console.WriteLine("Error ", e.Message);
             }
         }
-        public async Task httpAddGasto(long id,string titulo, string tipoGasto, string motivo, string cuantia)
+        public async Task httpAddGasto(long id,string titulo, string tipoGasto, string motivo, string cuantia,Cliente cliente)
         {
             //clientLogged = await httpGetClienteByEmail(emailLogged);
-            Gasto gasto = new Gasto(id, titulo, tipoGasto, motivo,cuantia);
+            Gasto gasto = new Gasto(id, titulo, tipoGasto, motivo,cuantia,cliente);
             string cont = JsonConvert.SerializeObject(gasto);
+            var content = new StringContent(cont);
+            content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+            var client = new HttpClient();
+            var url = "http://192.168.31.235:9090/gasto/add";
+            try
+            {
+                HttpResponseMessage resp2 = await client.PostAsync(url, content);
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error ", e.Message);
+            }
+        }
+        public async Task httpAddMantenimiento(long id, long odometro, string tipo, string localizacion, string cuantia, Vehiculo vehiculo)
+        {
+            //clientLogged = await httpGetClienteByEmail(emailLogged);
+            Mantenimiento service = new Mantenimiento(id, odometro, tipo, localizacion, cuantia, vehiculo);
+            string cont = JsonConvert.SerializeObject(service);
             var content = new StringContent(cont);
             content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
             var client = new HttpClient();
@@ -140,6 +162,15 @@ namespace CarMag.Service
             var resp2 = await client.GetStringAsync(url);
             Cliente Lcliente = JsonConvert.DeserializeObject<Cliente>(resp2);
             return Lcliente;
+        }
+
+        public async Task<List<Gasto>> httpGetGasto()
+        {
+            var client = new HttpClient();
+            var url = "http://192.168.31.235:9090/gasto/getGasto";
+            var resp2 = await client.GetStringAsync(url);
+            List<Gasto> lgasto = JsonConvert.DeserializeObject<List<Gasto>>(resp2);
+            return lgasto;
         }
 
     }
